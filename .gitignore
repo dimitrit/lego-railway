@@ -1,0 +1,56 @@
+cmake-build-debug/
+
+#
+# C-LION
+#
+
+.idea/
+
+#
+# OS-X
+#
+
+.DS_Store/
+
+#
+# EAGLE PCB layout tool
+#
+
+# Backup files
+*.s#?
+*.b#?
+*.l#?
+
+# Eagle project file
+eagle.epf
+
+# Autorouter files
+*.pro
+*.job
+
+# CAM files
+*.$$$
+*.cmp
+*.ly2
+*.l15
+*.sol
+*.plc
+*.stc
+*.sts
+*.crc
+*.crs
+
+*.dri
+*.drl
+*.gpi
+*.pls
+
+*.drd
+*.drd.*
+
+*.info
+
+*.eps
+
+# file locks introduced since 7.x
+*.lck
