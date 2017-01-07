@@ -18,11 +18,21 @@ RFID readers are held in place using custom straight tracks.
 
 Details on [Thingiverse](http://www.thingiverse.com/thing:2020399).
 
+All trains have RFID tags attached to their train motors to allow them to be uniquely identified. Such RFID stickers (aka RFID inlays) are widely available from online retailers and auction sites.
+
+![RFID Sticker Location](images/rfid-tag-location.jpg "RFID Sticker Location")
+
 ### IR Emitters and Signals
 
 Trains are controlled using TSAL6400 infrared emitters which are housed, together with the train signals, in custom 4x2 bricks. 
 
+![Train Signal incorporating IR Emitter](http://thingiverse-production-new.s3.amazonaws.com/renders/4f/6c/6b/93/9e/d89454c8808871f2905715fa40733632_preview_featured.JPG "Train Signal incorporating IR Emitter")
+
+Details on [Thingiverse](http://www.thingiverse.com/thing:2022212).
+
 Note that because of the low angle of the IR emitters, the [Lego Cargo Train](https://shop.lego.com/en-GB/Cargo-Train-60052) engine requires minor modifications to the placement of the IR receiver module to ensure that it responds reliably to speed and brake commands. Specifically, the module is raised using a 4x4 frame plate (64799) so that the receiver slightly protrudes above the engine bay. Furthermore the rear cover has been reduced in height by removing the top 1x4x2/3 bowed plate (93273), leaving more of the receiver exposed.  
+
+![Raised IR Receiver](images/raised-ir-receiver.jpg "Raised IR Receiver")
 
 ### Disclaimer
 
