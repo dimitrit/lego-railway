@@ -16,10 +16,10 @@
 
 #include "DispatchQueue.h"
 
-DispatchQueue::DispatchQueue(): _head(0), _tail(0), _count(0) { }
+DispatchQueue::DispatchQueue() : _head(0), _tail(0), _count(0) {}
 
 bool DispatchQueue::queue(uint8_t loop, tag_t tag) {
-    if (_count == QUEUE_MAX_LENGTH) {
+    if (_count == QUEUE_MAX_LENGTH || queued(tag)) {
         return false;
     }
 
@@ -37,4 +37,14 @@ void DispatchQueue::dispatch(bool(*dispatch_handler)(request_t request)) {
         _tail = (_tail + 1) % QUEUE_MAX_LENGTH;
         _count--;
     }
+}
+
+bool DispatchQueue::queued(tag_t tag) {
+    for (int i = 0; i < _count; i++) {
+        request_t request = _queue[(_tail + i) % QUEUE_MAX_LENGTH];
+        if (memcmp(request.tag.id, tag.id, sizeof(struct tag_t)) == 0) {
+            return true;
+        }
+    }
+    return false;
 }

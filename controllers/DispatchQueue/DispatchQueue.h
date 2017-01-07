@@ -36,6 +36,8 @@ public:
     void dispatch(bool(*dispatch_handler)(request_t));
 
 private:
+    bool queued(tag_t tag);
+
     struct request_t _queue[QUEUE_MAX_LENGTH];
     uint8_t _head = 0;
     uint8_t _tail = 0;
